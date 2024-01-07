@@ -1,0 +1,60 @@
+<template>
+    <div class="container" if:true={loggedInUserCookie}>
+    <c-navbar></c-navbar>
+    <div class="category-buttons" >
+        
+        <button class="slds-button slds-button_brand" onclick={handlefarmClick}  data-category="all">Farm Animals</button>
+        <button class="slds-button slds-button_brand" onclick={handleDogClick} data-category="science">Dog</button>
+        <button class="slds-button slds-button_brand" onclick={handleCatClick} data-category="technology">Cat</button>
+        <button class="slds-button slds-button_brand" onclick={handleFishClick} data-category="business">Fish</button>
+        <button class="slds-button slds-button_brand" onclick={handleBirdClick} data-category="entertainment">Birds</button>
+    </div>
+
+    <div if:true={animal}>
+
+        <h1> FOOD </h1>
+       <template for:each={animal.food} for:item='commodity'>
+        <div key={commodity.id} class="food-card">
+            <div class="item-image">
+            <img src={commodity.link} />
+            </div>
+            <div class="item-name">
+                {commodity.name}
+            </div>
+        </div>
+       </template>
+
+        <h1> SHELTER </h1>
+        <template for:each={animal.shelter} for:item='commodity'>
+            <div key={commodity.id} class="food-card">
+                <div class="item-image">
+                <img src={commodity.link} />
+                </div>
+                <div class="item-name">
+                    {commodity.name}
+                </div>
+            </div>
+           </template>
+
+        <h1> MEDICINES </h1>
+        <template for:each={animal.medicines} for:item='commodity'>
+            <div key={commodity.id} class="food-card">
+                <div class="item-image">
+                <img src={commodity.link} />
+                </div>
+                <div class="item-name">
+                    {commodity.name}
+                </div>
+            </div>
+           </template>
+    </div>
+
+    
+   <c-footer></c-footer> 
+</div>
+
+<div if:false={loggedInUserCookie}>
+    <c-sign-in></c-sign-in>
+</div>
+    
+</template>

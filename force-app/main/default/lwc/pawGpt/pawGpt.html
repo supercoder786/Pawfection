@@ -1,0 +1,35 @@
+<template>
+    <div class="slds-align_absolute-center">
+  <c-navbar></c-navbar>
+      <lightning-card class="custom-card">
+        
+        <div class="str">{animatedString} </div>
+        
+        
+        <template if:true={showSpinner}>
+          <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+        </template>
+  
+        <lightning-input
+          class="slds-m-around_medium"
+          type="text"
+          placeholder="Ask Me ... "
+          onchange={handlechange}
+          value={request}
+        ></lightning-input>
+
+        <div class="btn">
+        <lightning-button label="Submit" onclick={handleresponse}></lightning-button>
+        </div>    
+
+        <template if:true={searchChatResult}>
+          <div class="result">
+            <lightning-formatted-rich-text value={searchChatResult}></lightning-formatted-rich-text>
+          </div>
+        </template>
+
+      </lightning-card>
+      <c-footer></c-footer>
+    </div>
+  </template>
+ 

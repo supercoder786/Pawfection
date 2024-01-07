@@ -1,0 +1,62 @@
+<template>
+    <div class="profile-page" if:true={loggedInUserCookie}>
+      <c-navbar></c-navbar>
+      <div class="profile-header">
+        <div class="creator-image">
+          <div class="formatted-rich-text-container">
+              <lightning-formatted-rich-text value={rec.Image__c}></lightning-formatted-rich-text>
+          </div>
+      </div>
+          
+          <p class="nm" style="font-size: large;">Hello, I am {rec.Name} </p>
+      </div>
+      <div class="tab-bar">
+        <div class="tab" onclick={showPosts}>Post</div>
+        <div class="tab" onclick={showBlogs}>Blog</div>
+      </div>
+      <div class="content">
+        <template if:true={showPostSection}>
+            <div class="posts-section">
+                <h2>Feeds</h2>
+                  <div class="cards-container">
+                    <template for:each={feeds} for:item="feed">
+                        <div key={feed.Id} class="card">
+                            <h3>{feed.Name}</h3>
+                            <!-- <p>{feed.Post_Content__c}</p> -->
+                            <lightning-formatted-rich-text value={feed.Post_Image__c}></lightning-formatted-rich-text>
+                        </div>
+                    </template>
+                  </div>
+            </div>
+      </template>
+      <template if:true={showBlogSection}>
+            <div class="blogs-section">
+              <h2>Blogs</h2>
+              <div class="cards-container">
+                <template for:each={blogs} for:item="blog">
+                  <div key={blog.Id} class="card1" data-blog-id={blog.Id}>
+                    <div class="card-content">
+                      <div class="im">
+                        <lightning-formatted-rich-text class="im" value={blog.Blog_Image__c}></lightning-formatted-rich-text>
+                      </div>
+                      <div class="content1">
+                        <h1><b>{blog.Name}</b></h1>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </template>
+                    
+      </div>  
+      <c-footer></c-footer>
+    </div>
+   
+    
+    <div if:false={loggedInUserCookie}>
+      <c-sign-in></c-sign-in>
+  </div>
+  </template>
+  
+  

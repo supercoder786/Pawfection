@@ -1,0 +1,107 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background-attachment: fixed;
+    margin-top: 60px;
+}
+
+.card-container {
+    background-image: url(/sfsites/c/resource/drop);
+    background-attachment: fixed;
+}
+
+.person-card {
+    border: 1px solid #cdcdcd;
+    padding: 15px;
+    margin: 10px auto;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+}
+
+.person-card:hover {
+
+    transform: scale(1.05);
+
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+
+  }
+
+.person-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px; 
+    border: 3px solid #f4f4f4;
+}
+
+.person-username {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: black;
+    margin-left: 50px;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+.creator-image {
+    width: 80px; /* Adjust the size as needed */
+    height: 80px; /* Adjust the size as needed */
+    border-radius: 50%;
+    overflow: hidden;
+  
+    position: relative;
+  }
+  
+  .formatted-rich-text-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start; /* Align content to the bottom */
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .options{
+  
+  
+    text-align: center;
+  }
+  .button1{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: lightblue;
+  }
+  
+  .button2 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+  }
+  
+  
+  
+  

@@ -1,0 +1,48 @@
+<template>
+
+    <div class="navbar-container">
+
+        <!-- <div class="logo" data-url="/">           
+          <a href="/" target="_self"><img src='/sfsites/c/resource/PAWFECTION' alt="User Profile" /></a>  
+        </div> -->
+    
+        <ul class="navbar">
+               <li> <div class="logo" data-url="/">           
+                <a href="/" target="_self"><img src='/sfsites/c/resource/bg3' alt="User Profile" /></a>  
+              </div></li>
+                <li data-url="/" onclick={navigateToFeed}>Feeds</li>
+                <li data-url="/allprofiles" onclick={navigateToProfiles}>Profiles</li>
+                <li data-url="/newspage" onclick={navigateToNews}>News</li>
+                <li data-url="/chats" onclick={navigateToChats}>ChatWithDoc</li>
+                <li data-url="/blogs" onclick={navigateToBlogs}>Blogs</li>  
+                <li data-url="/ai" onclick={navigateToAi}>PawGpt</li>            
+                <li data-url="/market" onclick={navigateToMarketPlace}>MarketPlace</li>
+                <li data-url="/training" onclick={navigateToTraining}>Pet Training</li>
+                <li data-url="/helpus" onclick={navigateToHelp}>Helping Hands</li>
+                <li data-url="/contactus" onclick={navigateToContactUs}>Contact us</li>
+                <li> 
+                    <div class="user-image" onclick={toggleDropdown}>
+                        
+                        <div class="creator-image">
+                            <div class="formatted-rich-text-container" if:true={rec}>
+                                <lightning-formatted-rich-text value={rec.Image__c}></lightning-formatted-rich-text>
+                            </div>
+                        </div>
+                           
+                      
+                        <template if:true={isDropdownVisible}>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li data-user-id={loggedInUserCookie} onclick={navigateToProfile} if:true={pet}>Profile</li>
+                                    <li><a href="/" onclick={handleLogout}>Logout</a></li>
+                                </ul>
+                            </div>
+                        </template>
+                    </div>
+                    
+                </li>
+         </ul>
+
+    </div>
+
+    </template>

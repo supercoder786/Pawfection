@@ -1,0 +1,59 @@
+<template>
+    <div class="app-container" if:true={loggedInUserCookie}>
+    <c-navbar></c-navbar>
+
+        <div class="feed-container">
+        
+          <lightning-card  class="slds-card">
+            <template if:true={feeds}>
+              <ul>
+                <template for:each={feeds} for:item="feed">
+                  <li key={feed.Id}  data-feed-id={feed}>
+                    <div class="feedheader">
+                      <div class="creator-image">
+                        <div class="formatted-rich-text-container" if:true={feed.Creator__r.Image__c}>
+                            <lightning-formatted-rich-text value={feed.Creator__r.Image__c}></lightning-formatted-rich-text>
+                        </div>
+                    </div>
+                    
+                    <div class="name">
+                      <b>{feed.Name}</b>
+                    </div>
+                  </div>
+                    <div class="timendate">
+                      Posted on   <lightning-formatted-date-time 
+                        value={feed.CreatedDate}
+                        year="numeric"
+                        day="2-digit"
+                        month="long"
+                        hour="2-digit"
+                        minute="2-digit"
+                    >
+                    </lightning-formatted-date-time></div>
+                    <div class = "feed-box">
+                     
+                     
+                      <div class="im"><lightning-formatted-rich-text value={feed.Post_Image__c}></lightning-formatted-rich-text>
+                      </div>
+                      <div class="thoughts">
+                        <lightning-formatted-rich-text value={feed.Post_Content__c}></lightning-formatted-rich-text>
+                      </div>
+                    
+                    </div>
+                  </li>
+                </template>
+              </ul>
+            </template>
+            
+            <template if:false={feeds}>
+              <p>No feeds found.</p>
+            </template>
+          </lightning-card>
+        </div>
+        <c-footer></c-footer>
+    </div>
+
+    <div if:false={loggedInUserCookie}>
+        <c-sign-in></c-sign-in>
+    </div>
+</template>

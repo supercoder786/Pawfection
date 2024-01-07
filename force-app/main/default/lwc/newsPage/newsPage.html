@@ -1,0 +1,43 @@
+<template>
+   
+    <div class="parent" if:true={loggedInUserCookie}>
+       <c-navbar></c-navbar>
+   <div class="container">
+     
+   <lightning-card >
+       <div class="category-buttons">
+         
+           <button class="slds-button slds-button_inverse" onclick={handleallcategoryClick}  data-category="all">All</button>
+           <button class="slds-button slds-button_inverse" onclick={handleCategoryClick} data-category="science">Science</button>
+           <button class="slds-button slds-button_inverse" onclick={handleCategoryClick} data-category="technology">Technology</button>
+           <button class="slds-button slds-button_inverse" onclick={handleCategoryClick} data-category="business">Business</button>
+           <button class="slds-button slds-button_inverse" onclick={handleCategoryClick} data-category="entertainment">Entertainment</button>
+       </div>
+       <div if:true={newsData}>
+           <template for:each={newsData} for:item="newsItem">
+               <div key={newsItem.title} class="news-card">
+                   <!-- <img src={newsItem.urlToImage} alt={newsItem.title} /> -->
+                   <div class="news-title">{newsItem.title}</div>
+                   <div class="news-description">{newsItem.description}</div>
+                   <div class="read-more">
+                       <a href={newsItem.url} target="_blank">Read More</a>
+                   </div>
+               </div>
+           </template>
+       </div>
+
+       <template if:false={newsData}>
+           <p class="Loading">Loading...</p>
+       </template>
+
+       <template if:true={error}>
+           <p>Error fetching news data.</p>
+       </template>
+   </lightning-card>
+</div>
+<c-footer></c-footer>
+</div>
+<div if:false={loggedInUserCookie}>
+   <c-sign-in></c-sign-in>
+</div>
+</template>

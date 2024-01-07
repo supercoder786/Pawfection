@@ -1,0 +1,176 @@
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 48px;
+    background-image: url(/sfsites/c/resource/bg);
+    background-attachment: fixed;
+    margin-bottom: 150px;
+}
+  
+.profile-header {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 50px;
+}
+  
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 4px solid #fff; /* Add a border around the profile picture */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+}
+  
+h1, p {
+    margin: 0;
+}
+  
+.tab-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+  
+.tab {
+    flex: 1;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+    color: #444;
+    font-family: 'Times New Roman', Times, serif;
+}
+  
+.tab.active {
+    background-color: #007BFF; /* Add a different color for the active tab */
+    color: #fff; /* Change the text color for the active tab */
+}
+.tab:hover {
+    background-color: #e0e0e0;
+}
+.content {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a box shadow to the content section */
+    background-color: #fff;
+    padding: 20px;
+}
+  
+h2 {
+    color: black; /* Change the color of the section headers */
+    margin-bottom: 15px;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+  
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: #444;
+}
+li:last-child {
+    border-bottom: none;
+}
+
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+    
+.card {
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    
+    
+}
+  .card h3 {
+    color: #030c15;
+    margin-bottom: 10px;
+}
+.card p {
+    color: #444;
+}
+
+.card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+  }
+
+  .card1 {
+    width: 475px;
+  display: inline-block;
+  border: 1px solid #ccc;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  
+  padding: 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  
+  vertical-align: top;
+  height: 300px;
+  max-height: 400px ; /* Set a fixed height for the cards */
+  overflow: hidden;
+  }
+  
+  .im {
+    max-height: 200px; /* Set a max height for the image */
+  overflow: hidden;
+  }
+  .content1 {
+    text-align: center; 
+    color: #0A4D68;/* Center-align the content */
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  
+  h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .card1:hover {
+
+    transform: scale(1.15);
+
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+
+  }
+  .creator-image {
+    width: 120px; /* Adjust the size as needed */
+    height: 120px; /* Adjust the size as needed */
+    border-radius: 50%;
+    overflow: hidden;
+   margin: auto;
+    position: relative;
+  }
+  
+  .formatted-rich-text-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start; /* Align content to the bottom */
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }

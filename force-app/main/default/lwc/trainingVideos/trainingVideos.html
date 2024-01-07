@@ -1,0 +1,35 @@
+<template>
+    <div class="container">
+    <c-navbar></c-navbar>
+        <h1><b>Training Videos</b></h1>
+
+        <div class="buttons">
+                <button class="slds-button slds-button_brand" onclick={loadDogVideos}>Dog</button>  
+                <button class="slds-button slds-button_brand" onclick={loadCatVideos}>Cat</button>  
+                
+        </div>
+
+            <div class="video-container" if:true={videos}>
+                <template for:each={videos} for:item="video">
+                    <div key={video.id} class="video-card">
+                        <iframe
+                            width="425"
+                            height="300"
+                            src={video.url}
+                            title={video.title}
+                            frameborder="0"
+                            allow="accelerometer;
+                            autopaly;
+                            clipboard-write;
+                            encrypted-media;
+                            gyroscope;
+                            picture-in-picture;
+                            web-share"                            
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </template>
+            </div>
+            <c-footer></c-footer>
+        </div>
+</template>

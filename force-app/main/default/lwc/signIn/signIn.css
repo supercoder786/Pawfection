@@ -1,0 +1,142 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.app {
+    background-image: url('/sfsites/c/resource/bg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 0px;
+    max-height: max-content;
+}
+
+.login-type{
+    margin-bottom: 0%;
+}
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    margin-top: 100px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeInUp 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Change to column to stack elements vertically */
+    /* Center align items horizontally */
+}
+
+.container img {
+    max-width: 100px;
+     /* Reset the left margin to center the images */
+    border-radius: 18px;
+    margin-bottom: 20px; /* Add margin between images */
+    align-items: center;
+    text-align: center;
+    margin-left: 35%;
+}
+
+.signup-link {
+    margin-top: 10px;
+    color: #850E35;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Add styles for the Amazon logo here */
+.amazon-logo {
+    max-width: 50px; /* Adjust the size as needed */
+    max-height: 36px;
+    margin-top: 10px; /* Adjust the margin-top as needed */
+   
+     /* Make the image a block element for proper alignment */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+}
+
+/* Login form styles */
+.lightning-input {
+    margin-bottom: 20px;
+}
+
+.lightning-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.lightning-button:hover {
+    background-color: #0056b3;
+}
+
+.lightning-button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.error {
+    color: #f00;
+    margin-top: 10px;
+}
+
+/* Typing animation styles */
+.typing-animation {
+    animation: typing 2s steps(40) 1s forwards;
+    overflow: hidden;
+    white-space: nowrap;
+    color:#850E35 ;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #850E35;
+}
+
+.amazon-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around; /* Center align the images horizontally */
+     /* Center align the middle logo vertically */
+    width: 100%;
+}

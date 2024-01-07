@@ -1,0 +1,35 @@
+<template>
+    <div class="help-us-container">
+        <c-navbar></c-navbar>
+      <div class="post-info-container">
+          <h1><b>Post New Information</b></h1>
+          <lightning-input label="Subject" value={postSubject} onchange={handlePostSubjectChange}></lightning-input>
+  
+          <div class="slds-form-element">
+              <label class="slds-form-element__label" for="textarea-id-01">Animal Information</label>
+               <div class="slds-form-element__control">
+                 <textarea 
+                      id="textarea-id-01" 
+                      placeholder="Enter information about the injured animal..." 
+                      class="slds-textarea" 
+                      
+                      onchange={handleNewAnimalInfoChange}>
+                  </textarea>
+              </div>
+          </div>
+  
+          <lightning-input type="text" label="Address" value={newAddress} onchange={handleNewAddressChange}></lightning-input>
+  
+          <lightning-input 
+              type="file" 
+              accept=".png, .jpg, .jpeg" 
+              label="Upload Injured animal photo " 
+              onchange={handleFileChange}>
+          </lightning-input>
+          <span lwc:if={fileData.filename} class="slds-p-left_small">{fileData.filename}</span>
+  
+          <button data-url="/helpus" onclick={postInfo}>Post Info</button>
+      </div>
+      <c-footer></c-footer>
+    </div>
+  </template>

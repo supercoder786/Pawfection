@@ -1,0 +1,26 @@
+<template>
+    <div class="app" if:true={loggedInUserCookie}>
+        <c-navbar></c-navbar>
+    <div class="container" >
+       
+        <h2 style="font-weight: bold;">Create Feed</h2>
+    <lightning-card >
+        <div class="slds-p-around_medium">
+           
+             <lightning-input type="file" accept=".png, .jpg, .jpeg" label="Select Picture" onchange={openfileUpload}></lightning-input>
+             <span lwc:if={fileData.filename} class="slds-p-left_small">{fileData.filename}</span>
+             <div class="slds-m-top_small">
+                 <img if:true={fileData.base64} src={previewImage} alt="Preview" style="max-width: 300px; max-height: 300px;" />
+             </div>
+
+             <lightning-input-rich-text label="Feed Content" value={feedContent} onchange={handleFeedChange}></lightning-input-rich-text>
+             <lightning-button label="Post" variant="brand" onclick={createFeed}></lightning-button>
+        </div>
+    </lightning-card>
+    </div>
+        <c-footer></c-footer>
+     </div>
+    <div if:false={loggedInUserCookie}>
+        <c-sign-in></c-sign-in>
+     </div>
+</template>

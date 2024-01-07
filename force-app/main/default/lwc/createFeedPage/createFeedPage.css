@@ -1,0 +1,61 @@
+/* Style the container */
+
+.app{
+    background-image: url(/sfsites/c/resource/bg);
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.container{
+    display: block;
+    padding: 1rem;
+    margin-left: 400px;
+    margin-right: 400px;
+    background-color:#f1f1f1;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    background-image: url(/sfsites/c/resource/bg);
+    background-attachment:fixed;
+}
+
+/* Style the card */
+.slds-card {
+    margin-bottom: 1rem;
+   
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the input fields */
+.slds-input,
+.slds-rich-text-editor {
+    width: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Style the Submit Blog button */
+.slds-button_brand {
+    background-color: #4a90e2;
+    margin-top: 1rem;
+}
+
+/* Override default styles for the Submit Blog button on hover and focus */
+.slds-button_brand:hover,
+.slds-button_brand:focus {
+    background-color: #0070d2;
+}
+
+/* Style the success and error messages */
+.slds-notify {
+    margin-bottom: 1rem;
+}
+
+/* Style the image URL input */
+.slds-input[type="url"] {
+    font-size: 0.875rem;
+}
+
+h2{
+    margin-left: 250px;
+    font-size: 25px;
+    color: #0070d2;
+}

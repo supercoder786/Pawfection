@@ -1,0 +1,25 @@
+<template>
+    <div class="gp">
+    <div class="parent">
+    <div   if:true={loggedInUserCookie}>
+        <c-navbar></c-navbar>
+    <template if:true={users}>
+    <template for:each={users} for:item="user">
+    <div key={user.Id} class="person-card" data-user-id={user.Username__c} onclick={openprofile}>
+        <div class="creator-image">
+            <div class="formatted-rich-text-container">
+                <lightning-formatted-rich-text value={user.Image__c}></lightning-formatted-rich-text>
+            </div>
+        </div>
+    <div class="person-username">{user.Username__c}</div>
+    </div>
+    </template>
+    </template>
+    <c-footer></c-footer>
+</div>
+</div>
+<div if:false={loggedInUserCookie}>
+    <c-sign-in></c-sign-in>
+</div>
+</div>
+    </template>

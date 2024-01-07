@@ -1,0 +1,30 @@
+<template>
+    <c-navbar></c-navbar>
+    
+    <template if:true={blogdata}>
+    <div class="blog-container">
+        <div class="blog-header" >
+            <h2><b>{blogdata.Name}</b></h2>
+            <!-- <p>{formattedDateTime}</p> -->
+        </div>
+        <div class="blog-content">
+            <div class="blog-image">
+             
+                <lightning-formatted-rich-text value={blogdata.Blog_Image__c}></lightning-formatted-rich-text>
+            </div>
+            <div class="blog-text">
+                
+                <lightning-formatted-rich-text value={blogdata.Content__c}></lightning-formatted-rich-text>
+            </div>
+        </div>
+        <div class="author-info" if:true={rec}>
+            <p><b>Author:{rec.Name}</b> </p>
+        </div>
+    </div>
+    
+</template>
+<c-footer></c-footer>
+    <template if:false={blogdata}>
+        <p>Loading...</p>
+    </template>
+</template>

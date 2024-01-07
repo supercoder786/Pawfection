@@ -1,0 +1,23 @@
+<template>
+ 
+    <div class="container" if:true={loggedInUserCookie}>
+      <c-navbar></c-navbar>
+      <template for:each={blogs} for:item="blog">
+        <div key={blog.Id} class="card" onclick={openblog} data-blog-id={blog.Id}>
+          <!-- <div class="logo">
+            <img src='/sfsites/c/resource/logo' alt="User Profile" />
+          </div> -->
+          <div class="im"><lightning-formatted-rich-text class="im" value={blog.Blog_Image__c}></lightning-formatted-rich-text>
+          </div>
+          <div class="content">
+            <!-- <h2>{blog.Name}</h2> -->
+            <h1><b>{blog.Name}</b></h1>
+          </div>
+        </div>
+      </template>
+      <c-footer></c-footer>
+    </div>
+    <div if:false={loggedInUserCookie}>
+      <c-sign-in></c-sign-in>
+  </div>
+  </template>

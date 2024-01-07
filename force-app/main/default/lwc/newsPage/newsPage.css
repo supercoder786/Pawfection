@@ -1,0 +1,66 @@
+.parent{
+    background-image: url(/sfsites/c/resource/bg);
+    background-attachment: fixed;
+    margin-bottom: 80px;
+}
+.container{
+    margin-top: 90px;
+    
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.news-card {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.news-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.news-description {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.read-more {
+    text-align: right;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding-top: 30px;
+}
+
+.category-buttons lightning-button {
+    margin: 0 0.5rem;
+}
+
+.Loading{
+    margin: auto;
+}
+.slds-button_inverse{
+    font-family: 'Times New Roman', Times, serif;
+    background-color:#850E35;
+    color: #EAC7C7;
+    
+}
+
+.slds-button_inverse:hover{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    
+}

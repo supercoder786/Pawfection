@@ -1,0 +1,37 @@
+<!-- signUpForm.html -->
+<template>
+    <div class="app">
+    <div class="container">
+
+    
+        <img src='/sfsites/c/resource/bg3' alt="Logo" />
+        <h2 style="font-weight: bold;">Sign-Up</h2>
+        <div class="slds-p-around_medium">
+            <lightning-input label="Name" value={name} onchange={handleNameChange}></lightning-input>
+            <lightning-input label="Bio" value={bio} onchange={handleBioChange}></lightning-input>
+            <lightning-input label="Address" value={Address} onchange={handleAddressChange}></lightning-input>
+            <lightning-input label="Username" value={username} onchange={handleUsernameChange}></lightning-input>
+            <lightning-input label="Password" type="password" value={password} onchange={handlePasswordChange}></lightning-input>
+            <lightning-input type="file" accept=".png, .jpg, .jpeg" label="Select Picture" onchange={openfileUpload}></lightning-input>
+             <span lwc:if={fileData.filename} class="slds-p-left_small">{fileData.filename}</span>
+             <div class="slds-m-top_small">
+                 <img if:true={fileData.base64} src={previewImage} alt="Preview" style="max-width: 300px; max-height: 300px;" />
+             </div>
+            <!-- <lightning-input label="Image (Rich Text)" value={image} onchange={handleImageChange}></lightning-input> -->
+            <lightning-button label="Sign Up" variant="brand" onclick={handleSignUp} disabled={isButtonDisabled}></lightning-button>
+        </div>
+    
+    <template if:true={showMessage}>
+        <div class="slds-notify_container">
+            <div class="slds-notify slds-notify_toast slds-theme_error" role="alert">
+                <span class="slds-assistive-text">Error</span>
+                <div class="slds-notify__content">
+                    <h2 class="slds-text-heading_small">Message</h2>
+                    <p>{Message}</p>
+                </div>
+            </div>
+        </div>
+    </template>
+</div>
+</div>
+</template>

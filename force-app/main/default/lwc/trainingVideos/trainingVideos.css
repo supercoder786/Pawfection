@@ -1,0 +1,51 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.dog{
+    background-color: #850E35 ;
+    color: #EAC7C7 ;
+}
+.video-container {
+
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-around;
+}
+
+.video-card {
+
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.slds-button{
+    background-color: #850E35;
+    }
+
+.slds-button:active,
+.slds-button:focus {
+    background-color: #EAC7C7;
+    color:#850E35 ;
+}

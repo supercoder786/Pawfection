@@ -1,0 +1,19 @@
+<template>
+    <div class="app">
+       
+        <div class="container">
+            <img  src='/sfsites/c/resource/bg3' alt="Logo" />
+            <h1 class="typing-animation">Login</h1>
+            
+                <lightning-radio-group class='login-type' name="loginType" label="Select Login Type" options={loginOptions} value={selectedLoginType} onchange={handleLoginTypeChange}></lightning-radio-group>
+          
+            <lightning-input label="Username" type="text" value={username} onchange={handleUsernameChange} required></lightning-input>
+            <lightning-input label="Password" type="password" value={password} onchange={handlePasswordChange} required></lightning-input>
+            <lightning-button label="Login" onclick={handleLogin} disabled={isButtonDisabled}></lightning-button>
+          
+            <p class="signup-link" onclick={navigateToSignUp}>Don't have an account? Sign Up</p>
+        </div>
+
+       
+    </div>
+</template>

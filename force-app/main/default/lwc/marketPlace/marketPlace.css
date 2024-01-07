@@ -1,0 +1,69 @@
+*{
+    align-items: center;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.container {
+    margin-top: 100px;
+    margin-bottom: 80px;
+    padding-top: 50px;
+    background-image: url(/sfsites/c/resource/bg);
+    background-attachment: fixed;
+  }
+.food-card {
+    background-color: white;
+    width: 145px;
+    height: 180px;
+    padding-top: 20px;
+    border-radius: 20px;
+    box-shadow: 14px 18px 48px -7px rgba(123, 123, 123, 0.34);
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.item-image {
+    height: 110px;
+    width: 110px;
+    border-radius: 55px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.item-image img {
+    height: 110px;
+}
+
+.item-name {
+    text-align: center;
+    padding-top: 25px;
+}
+
+h1{
+    align-items: center;
+    text-align: center;
+    color: #0070d2;
+    font-size: xx-large;
+    margin-top: 5px;
+}
+
+.category-buttons{
+    align-items: center;
+    text-align: center;
+   
+}
+.slds-button{
+background-color: #850E35;
+}
+
+.slds-button:active,
+.slds-button:focus {
+    background-color: #EAC7C7;
+    color:#850E35 ;
+}

@@ -1,0 +1,30 @@
+<template>
+    <div class="container" if:true={loggedInUserCookie}>
+        <c-navbar></c-navbar>
+        <div class="card-container">
+            <h1>Chats</h1>
+            <div class="options">
+                <div  class="button1" onclick={b1}>Chat with Doctors</div>
+                <div  class="button2" onclick={b2}>Chat with Pet-Owners</div>
+    
+             </div>
+             
+            <template if:true={users}>
+                <template for:each={users} for:item="user">
+                    <div key={user.Id} class="person-card" onclick={openprofile} data-user-name={user.Name}>
+                        <div class="creator-image">
+                            <div class="formatted-rich-text-container">
+                                <lightning-formatted-rich-text value={user.Image__c}></lightning-formatted-rich-text>
+                            </div>
+                        </div>
+                        <div class="person-username">{user.Name}</div>
+                    </div>
+                </template>
+            </template>
+        </div>
+        <c-footer></c-footer>
+    </div>
+    <div if:false={loggedInUserCookie}>
+        <c-sign-in></c-sign-in>
+    </div>
+</template>

@@ -1,0 +1,41 @@
+.post-info-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+h1{
+    text-align: center;
+}
+/* Add a sympathy theme */
+body {
+    background-color: #f2f2f2;
+}
+
+.help-us-container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+.slds-input[type="url"] {
+    font-size: 0.875rem;
+}

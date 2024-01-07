@@ -1,0 +1,28 @@
+<template>
+    <div class="parent">
+        <c-navbar></c-navbar>
+        <div class="page-heading">
+            <h1>Help Us: Injured Animal Information</h1>
+        </div>
+        <div class="post-information-button">
+            <button data-url="/postinformation" 
+                    class="slds-button slds-button_text-destructive" 
+                    onclick={navigateToPostInformation}>
+                    Post Injured Animal Information
+            </button>
+        </div> 
+        <div class="help-us-container">
+         <template if:true={animalInfoList}>
+            <template for:each={animalInfoList} for:item="animalInfo">
+                <div key={animalInfo.Id} class="animal-info-card">
+                    <lightning-formatted-rich-text value={animalInfo.Image__c}></lightning-formatted-rich-text>
+                    <p><strong>Address:</strong> {animalInfo.Address__c}</p>
+                    <br>
+                    <p><strong>Description:</strong>{animalInfo.Description__c}</p>
+                </div>
+            </template>
+         </template>
+        </div>
+        <c-footer></c-footer>
+    </div>
+</template>

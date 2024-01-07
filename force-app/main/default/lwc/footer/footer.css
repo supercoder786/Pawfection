@@ -1,0 +1,43 @@
+.footer-container {
+    padding: 1rem;
+    border-top: 1px solid #d8d8d8;
+    display: flex;
+    justify-content: center; /* align buttons to center */
+    background-color: #EAC7C7;
+    position: fixed; /* fix the footer's position */
+    bottom: 0; /* place it at the bottom of the viewport */
+    left: 0; /* start from the left edge of the viewport */
+    right: 0; /* stretch it to the right edge */
+    z-index: 1000; /* ensure it's on top of other page elements */
+   
+    padding-bottom: 20px;
+}
+
+.navbar{
+    font-family: 'Times New Roman', Times, serif;
+}
+.slds-button_inverse{
+    font-family: 'Times New Roman';
+    background-color:#850E35;
+    color: white;
+    
+}
+
+.slds-button_inverse:hover{
+    transform: translateY(-2px); /* small move upwards */
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08); /* increased shadow on hover */
+
+}
+
+
+
+
+.custom-button:hover {
+    background-color: bisque;
+    transform: translateY(-2px); /* small move upwards */
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08); /* increased shadow on hover */
+}
+
+.custom-button:active {
+    transform: translateY(1px); /* small move downwards when active */
+}
